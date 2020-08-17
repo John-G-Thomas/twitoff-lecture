@@ -27,7 +27,24 @@ class Tweet(DB.Model):
 def insert_example_users():
     """Example data to play with."""
     austen = User(id=1, name='austen')
-    elon = User(id=2, name='elonmusk')
+    elonmusk = User(id=2, name='elonmusk')
     DB.session.add(austen)
-    DB.session.add(elon)
+    DB.session.add(elonmusk)
+    DB.session.commit()
+
+
+def insert_example_Tweet():
+    """Example data to play with."""
+    tweetauston1 = Tweet(id=1, text='Lambda school is amazing!', user_id=1, user='austen')
+    tweetauston2 = Tweet(id=4, text='Lambda school is amazing!', user_id=1, user='austen')
+    tweetauston3 = Tweet(id=6, text='Lambda school is amazing!', user_id=1, user='austen')
+    tweetelon1 = Tweet(id=2, text='WE gonna Go TO Mars!', user_id=2, user='elonmusk')
+    tweetelon2 = Tweet(id=3, text='WE gonna Go TO Mars!', user_id=2, user='elonmusk')
+    tweetelon3 = Tweet(id=5, text='WE gonna Go TO Mars!', user_id=2, user='elonmusk')
+    DB.session.add(tweetauston1)
+    DB.session.add(tweetauston2)
+    DB.session.add(tweetauston3)
+    DB.session.add(tweetelon1)
+    DB.session.add(tweetelon2)
+    DB.session.add(tweetelon3)
     DB.session.commit()
