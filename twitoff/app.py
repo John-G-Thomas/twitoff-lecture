@@ -19,7 +19,7 @@ def create_app():
 
     @app.route('/update')
     def update():
-        # Reset the database
+        # Update the database
         DB.drop_all()
         DB.create_all()
         insert_example_users()
