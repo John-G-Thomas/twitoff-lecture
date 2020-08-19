@@ -14,16 +14,20 @@ def create_app():
     # ... TODO make the app!
     @app.route('/')
     def root():
-        return render_template('templates/base.html', title='Home',
+        return render_template('base.html', title='Home',
                                users=User.query.all())
 
     @app.route('/update')
     def update():
-        # Update the database
+        # Reset the database
+        insert_example_users()
+        return render_template('base.html', title='Users updated!',
+                               users=User.query.all())
+
+    @app.route('/reset')
+    def reset():
         DB.drop_all()
         DB.create_all()
-        insert_example_users()
-        return render_template('templates/base.html', title='Users updated!',
-                               users=User.query.all())
+        return render_template('base.html', title='Reset database!')
 
     return app
