@@ -4,11 +4,15 @@ import basilica
 import tweepy
 from .models import DB, Tweet, User
 
+# vader-sentiment
 
 TWITTER_USERS = ['calebhicks', 'elonmusk', 'rrherr', 'SteveMartinToGo',
                  'alyankovic', 'nasa', 'sadserver', 'jkhowland', 'austen',
                  'common_squirrel', 'KenJennings', 'conanobrien',
-                 'big_ben_clock', 'IAM_SHAKESPEARE']
+                 'big_ben_clock', 'IAM_SHAKESPEARE', 'realDonaldTrump',
+                 'HillaryClinton', 'BarackObama', 'BillGates', 'BernieSanders',
+                 'nytimes', 'WSJ', 'TheEconomist', 'joerogan', 'jeffbezos',
+                 'jack', 'JeffBezos', 'finkd']
 
 TWITTER_API_KEY = getenv('TWITTER_API_KEY')
 TWITTER_API_KEY_SECRET = getenv('TWITTER_API_KEY_SECRET')
@@ -49,3 +53,16 @@ def insert_example_users():
     """Example data to play with."""
     add_or_update_user('austen')
     add_or_update_user('elonmusk')
+    add_or_update_user('JeffBezos')
+    add_or_update_user('finkd')
+    add_or_update_user('realDonaldTrump')
+    add_or_update_user('common_squirrel')
+    add_or_update_user('conanobrien')
+    add_or_update_user('BernieSanders')
+    add_or_update_user('nytimes')
+    add_or_update_user('WSJ')
+    add_or_update_user('BillGates')
+    add_or_update_user('joerogan')
+    add_or_update_user('jack')
+    add_or_update_user('HillaryClinton')
+    add_or_update_user('BarackObama')

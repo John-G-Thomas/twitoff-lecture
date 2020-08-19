@@ -5,6 +5,9 @@ from .predict import predict_user
 from .twitter import add_or_update_user, insert_example_users
 
 
+# from .visaliztion import plot_confusion_matrix
+
+
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
