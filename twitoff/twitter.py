@@ -1,4 +1,3 @@
-
 """Retrieve Tweets, embeddings, and persist in the database."""
 from os import getenv
 import basilica
