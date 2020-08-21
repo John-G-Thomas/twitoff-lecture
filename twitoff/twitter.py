@@ -4,7 +4,8 @@ import basilica
 import tweepy
 from .models import DB, Tweet, User
 
-# vader-sentiment
+# from textblob import TextBlob
+# from vadersentiment import SentimentIntensityAnalyzer
 
 TWITTER_USERS = ['calebhicks', 'elonmusk', 'rrherr', 'SteveMartinToGo',
                  'alyankovic', 'nasa', 'sadserver', 'jkhowland', 'austen',
